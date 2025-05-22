@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itamStoreFragment">
+
+    <fragment
+        android:id="@+id/itamStoreFragment"
+        android:name="com.prantodev.rtaassessment.ItamStoreFragment"
+        android:label="fragment_itam_store"
+        tools:layout="@layout/fragment_itam_store" >
+        <action
+            android:id="@+id/action_itamStoreFragment_to_itemStorePurchaseFragment"
+            app:destination="@id/itemStorePurchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemStorePurchaseFragment"
+        android:name="com.prantodev.rtaassessment.ItemStorePurchaseFragment"
+        android:label="fragment_item_store_purchase"
+        tools:layout="@layout/fragment_item_store_purchase" />
+</navigation>
