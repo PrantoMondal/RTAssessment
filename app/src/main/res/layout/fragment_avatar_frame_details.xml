@@ -25,15 +25,15 @@
                 android:id="@+id/ivProfileImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/img1"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/img1" />
 
             <ImageView
                 android:id="@+id/ivFrame"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/f1"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/f1" />
 
         </FrameLayout>
 
@@ -57,8 +57,7 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,18 +74,14 @@
                     android:textColor="#737373"
                     android:textFontWeight="400" />
 
-                <ImageView
-                    android:id="@+id/ivPurchaseIcon"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/dimond" />
 
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/dimond"
                     android:paddingStart="8dp"
-                    android:text="1000"
+                    android:text=" 1000"
                     android:textColor="#b4d7ea"
                     android:textStyle="bold" />
 

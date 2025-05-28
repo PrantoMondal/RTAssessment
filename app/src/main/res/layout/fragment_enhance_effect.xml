@@ -21,12 +21,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/ivSelectedImage"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:src="@drawable/e1"
-                android:layout_gravity="center" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivSelectedImage"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/e1" />
+
+                <TextView
+                    android:id="@+id/tvPreviewBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/eye"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Preview"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+
+                    android:textFontWeight="500" />
+
+
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -47,56 +71,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvEnhanceEffect"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvEnhanceEffect">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
                 android:gravity="center"
-                android:layout_marginBottom="8dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Price: "
-                    android:textColor="#737373"
-                    android:fontFamily="sans-serif"
-                    android:textFontWeight="400" />
-                <ImageView
-                    android:id="@+id/ivPurchaseIcon"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/dimond" />
-                <TextView
-                    android:id="@+id/tvPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15000"
-                    android:textColor="#b4d7ea"
-                    android:textStyle="bold"
-                    android:paddingStart="8dp" />
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Price: "
+                    android:textColor="#737373"
+                    android:textFontWeight="400" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/dimond"
+                    android:paddingStart="8dp"
+                    android:text=" 15000"
+                    android:textColor="#b4d7ea"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="8dp"
                     android:text=" |  Validity: "
                     android:textColor="#737373"
-                    android:fontFamily="sans-serif"
-                    android:textFontWeight="400"
-                    android:paddingStart="8dp" />
+                    android:textFontWeight="400" />
+
                 <TextView
                     android:id="@+id/tvValidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="8dp"
                     android:text="10 Days"
                     android:textColor="#000000"
-                    android:fontFamily="sans-serif"
-                    android:textFontWeight="500"
-                    android:paddingStart="8dp" />
+                    android:textFontWeight="500" />
 
             </LinearLayout>
 
@@ -104,15 +126,14 @@
                 android:id="@+id/btnPurchase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Purchase Now"
-                android:backgroundTint="#b4d7ea"
-                android:textColor="@android:color/white"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginBottom="16dp"
-                android:padding="8dp" />
+                android:backgroundTint="#b4d7ea"
+                android:padding="8dp"
+                android:text="Purchase Now"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

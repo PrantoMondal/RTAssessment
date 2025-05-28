@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:batch="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Heart of Time"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#737373" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="0dp">
+
+            <ImageView
+                android:id="@+id/ivAvatarImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/f1" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avatar" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Validity:"
+                android:textColor="#737373"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:textSize="16sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btn7Days"
+                    style="@style/RectangleChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+
+                    android:text="7 Days"
+                    app:chipBackgroundColor="@drawable/chip_selector"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btn15Days"
+                    style="@style/RectangleChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+
+                    android:text="15 Days"
+                    app:chipBackgroundColor="@drawable/chip_selector"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btn30Days"
+                    style="@style/RectangleChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+
+                    android:text="30 Days"
+                    app:chipBackgroundColor="@drawable/chip_selector"/>
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/dimond"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="2"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:background="@drawable/cancel_btn"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                batch:backgroundTint="#5DA9D2"
+                android:text="Confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

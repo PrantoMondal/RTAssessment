@@ -38,12 +38,17 @@ class EnhanceEffectFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.rvEnhanceEffect)
         val tvValidity: TextView = view.findViewById(R.id.tvValidity)
         val tvPrice: TextView = view.findViewById(R.id.tvPrice)
+        val tvPreviewBtn: TextView = view.findViewById(R.id.tvPreviewBtn)
 
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
         recyclerView.adapter = AvatarFrameAdapter(enhanceEffectList) { selectedItem ->
             image.setImageResource(selectedItem.imageResId)
             tvPrice.text = selectedItem.subtitle.split("/")[0]
             tvValidity.text = selectedItem.subtitle.split("/")[1].replace("d"," Days")
+        }
+
+        tvPreviewBtn.setOnClickListener {
+
         }
     }
 }

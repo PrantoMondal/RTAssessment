@@ -38,17 +38,28 @@ class AvatarFrameDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val image: ImageView = view.findViewById(R.id.ivFrame)
+        val ivFrame: ImageView = view.findViewById(R.id.ivFrame)
         val tvValidity: TextView = view.findViewById(R.id.tvValidity)
         val tvPrice: TextView = view.findViewById(R.id.tvPrice)
 
 
         val recyclerView: RecyclerView = view.findViewById(R.id.rvFrameAvatar)
+
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
         recyclerView.adapter = AvatarFrameAdapter(frameList) { selectedItem ->
-            image.setImageResource(selectedItem.imageResId)
-            tvPrice.text = selectedItem.subtitle.split("/")[0]
-            tvValidity.text = selectedItem.subtitle.split("/")[1].replace("d"," Days")
+            val dialog = PurchaseConfirmationDialogFragment.newInstance(
+                title = selectedItem.title,
+                price = selectedItem.subtitle,
+                imageResId = selectedItem.imageResId
+            )
+            dialog.setOnPurchaseConfirmedListener(object : PurchaseConfirmationDialogFragment.OnPurchaseConfirmedListener {
+                override fun onPurchaseConfirmed(imageResId: Int, validityDays: Int) {
+                    ivFrame.setImageResource(imageResId)
+
+
+                }
+            })
+            dialog.show(parentFragmentManager, "PurchaseConfirmationDialogFragment")
         }
 
     }
