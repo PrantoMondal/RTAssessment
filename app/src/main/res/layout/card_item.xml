@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="8dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="#EFF6FA"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cardTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardImage"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:text="Heart of Time"
+        android:textColor="#313131"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cardDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:text="8 days"
+        android:drawablePadding="4dp"
+        android:layout_gravity="center"
+        android:textColor="#737373"
+        android:fontFamily="sans-serif"
+        android:textSize="10sp"
+        app:drawableStartCompat="@drawable/clock" />
+
+</LinearLayout>

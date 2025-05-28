@@ -3,22 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-
-    app:startDestination="@id/itamStoreFragment">
+    app:startDestination="@id/itemStoreFragment">
 
     <fragment
-        android:id="@+id/itamStoreFragment"
-        android:name="com.prantodev.rtaassessment.ItamStoreFragment"
+        android:id="@+id/itemStoreFragment"
+        android:name="com.example.xmlpractice.ItemStoreFragment"
         android:label="Item Store"
-
-        tools:layout="@layout/fragment_itam_store" >
+        tools:layout="@layout/fragment_item_store" >
         <action
-            android:id="@+id/action_itamStoreFragment_to_itemStorePurchaseFragment"
-            app:destination="@id/itemStorePurchaseFragment" />
+            android:id="@+id/action_itemStoreFragment_to_avatarFrameDetailsFragment"
+            app:destination="@id/avatarFrameDetailsFragment" />
+        <action
+            android:id="@+id/action_itemStoreFragment_to_enhanceEffectFragment"
+            app:destination="@id/enhanceEffectFragment" />
     </fragment>
     <fragment
-        android:id="@+id/itemStorePurchaseFragment"
-        android:name="com.prantodev.rtaassessment.ItemStorePurchaseFragment"
-            android:label="Items Store"
-        tools:layout="@layout/fragment_item_store_purchase" />
+        android:id="@+id/itemBagFragment"
+        android:name="com.example.xmlpractice.ItemBagFragment"
+        android:label="fragment_item_bag"
+        tools:layout="@layout/fragment_item_bag" />
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.xmlpractice.PurchaseFragment"
+        android:label="fragment_purchase"
+        tools:layout="@layout/fragment_purchase" />
+    <fragment
+        android:id="@+id/avatarFrameDetailsFragment"
+        android:name="com.example.xmlpractice.AvatarFrameDetailsFragment"
+        android:label="Avatar Frame"
+        tools:layout="@layout/fragment_avatar_frame_details" />
+    <fragment
+        android:id="@+id/enhanceEffectFragment"
+        android:name="com.example.xmlpractice.EnhanceEffectFragment"
+        android:label="Enhance Effect"
+        tools:layout="@layout/fragment_enhance_effect" />
 </navigation>

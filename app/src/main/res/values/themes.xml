@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RTAassessment" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.XMLPractice" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/white</item>
     </style>
 
-    <style name="Theme.RTAassessment" parent="Base.Theme.RTAassessment" />
+    <style name="Theme.XMLPractice" parent="Base.Theme.XMLPractice" />
 </resources>
