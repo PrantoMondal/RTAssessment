@@ -53,8 +53,10 @@ class AvatarFrameDetailsFragment : Fragment() {
                 imageResId = selectedItem.imageResId
             )
             dialog.setOnPurchaseConfirmedListener(object : PurchaseConfirmationDialogFragment.OnPurchaseConfirmedListener {
-                override fun onPurchaseConfirmed(imageResId: Int, validityDays: Int) {
+                override fun onPurchaseConfirmed(imageResId: Int, tvPrices: String) {
                     ivFrame.setImageResource(imageResId)
+                    tvPrice.text = tvPrices.split("/")[0]
+                    tvValidity.text = tvPrices.split("/")[1]
 
 
                 }

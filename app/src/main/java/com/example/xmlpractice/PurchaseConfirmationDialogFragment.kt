@@ -28,7 +28,7 @@ class PurchaseConfirmationDialogFragment : BottomSheetDialogFragment() {
         val imageResId = arguments?.getInt(ARG_IMAGE_RES_ID) ?: R.drawable.f1
 
         binding.tvTitle.text = title
-        binding.tvPrice.text = price
+        binding.tvPrice.text = price.split("/")[0]
         binding.ivAvatarImage.setImageResource(imageResId)
 
         binding.chipGroup.check(R.id.btn7Days)
@@ -67,12 +67,14 @@ class PurchaseConfirmationDialogFragment : BottomSheetDialogFragment() {
     }
 
     interface OnPurchaseConfirmedListener {
-        fun onPurchaseConfirmed(imageResId: Int, validityDays: Int)
+        fun onPurchaseConfirmed(imageResId: Int, tvPrice: String)
     }
 
     private fun onConfirmClicked() {
         val imageResId = arguments?.getInt(ARG_IMAGE_RES_ID) ?: R.drawable.f1
-        listener?.onPurchaseConfirmed(imageResId, selectedValidityDays)
+        val tvPrice = arguments?.getString(ARG_PRICE) ?: "0"
+
+        listener?.onPurchaseConfirmed(imageResId, tvPrice)
         dismiss()
     }
     companion object {
