@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -38,12 +39,16 @@ class AvatarFrameDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val image: ImageView = view.findViewById(R.id.ivFrame)
+        val tvValidity: TextView = view.findViewById(R.id.tvValidity)
+        val tvPrice: TextView = view.findViewById(R.id.tvPrice)
 
 
         val recyclerView: RecyclerView = view.findViewById(R.id.rvFrameAvatar)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
         recyclerView.adapter = AvatarFrameAdapter(frameList) { selectedItem ->
             image.setImageResource(selectedItem.imageResId)
+            tvPrice.text = selectedItem.subtitle.split("/")[0]
+            tvValidity.text = selectedItem.subtitle.split("/")[1].replace("d"," Days")
         }
 
     }

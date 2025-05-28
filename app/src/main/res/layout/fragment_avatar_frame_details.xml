@@ -42,12 +42,87 @@
             android:id="@+id/rvFrameAvatar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/frameImageView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:clipToPadding="false"
+
             android:padding="16dp"
-            android:clipToPadding="false" />
+            app:layout_constraintBottom_toTopOf="@+id/llPurchaseBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameImageView" />
+
+        <LinearLayout
+            android:id="@+id/llPurchaseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Price: "
+                    android:textColor="#737373"
+                    android:textFontWeight="400" />
+
+                <ImageView
+                    android:id="@+id/ivPurchaseIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/dimond" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:text="1000"
+                    android:textColor="#b4d7ea"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="8dp"
+                    android:text=" |  Validity: "
+                    android:textColor="#737373"
+                    android:textFontWeight="400" />
+
+                <TextView
+                    android:id="@+id/tvValidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="8dp"
+                    android:text="7 Days"
+                    android:textColor="#000000"
+                    android:textFontWeight="500" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#b4d7ea"
+                android:padding="8dp"
+                android:text="Purchase Now"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
