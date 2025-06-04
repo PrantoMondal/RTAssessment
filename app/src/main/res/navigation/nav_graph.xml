@@ -16,6 +16,7 @@
         <action
             android:id="@+id/action_itemStoreFragment_to_enhanceEffectFragment"
             app:destination="@id/enhanceEffectFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/itemBagFragment"
@@ -31,19 +32,10 @@
         android:id="@+id/avatarFrameDetailsFragment"
         android:name="com.example.xmlpractice.AvatarFrameDetailsFragment"
         android:label="Avatar Frame"
-        tools:layout="@layout/fragment_avatar_frame_details" >
-        <action
-            android:id="@+id/action_avatarFrameDetailsFragment_to_purchaseConfirmationDialogFragment"
-            app:destination="@id/purchaseConfirmationDialogFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_avatar_frame_details" />
     <fragment
         android:id="@+id/enhanceEffectFragment"
         android:name="com.example.xmlpractice.EnhanceEffectFragment"
         android:label="Enhance Effect"
         tools:layout="@layout/fragment_enhance_effect" />
-    <fragment
-        android:id="@+id/purchaseConfirmationDialogFragment"
-        android:name="com.example.xmlpractice.PurchaseConfirmationDialogFragment"
-        android:label="fragment_purchase_confirmation_dialog"
-        tools:layout="@layout/fragment_purchase_confirmation_dialog" />
 </navigation>

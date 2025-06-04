@@ -64,6 +64,8 @@ class AvatarFrameDetailsFragment : Fragment() {
             dialog.show(parentFragmentManager, "PurchaseConfirmationDialogFragment")
         }
 
+
+
     }
 
 }
